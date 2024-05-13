@@ -1,0 +1,50 @@
+/* Definiert benutzerdefinierte CSS-Variablen für die Verwendung in der gesamten Datei */
+:root {
+  --primary: #fff; /* Definiert die primäre Farbe */
+}
+
+/* Stilregeln für allgemeine Buttons */
+.btn {
+  padding: 8px 20px; /* Innenabstand für den Button */
+  border-radius: 2px; /* Abrundung der Ecken */
+  outline: none; /* Entfernt den Umriss */
+  border: none; /* Entfernt die Rahmen */
+  cursor: pointer; /* Ändert den Mauszeiger bei Mouseover */
+}
+
+/* Stilregeln für Buttons mit primärem Stil */
+.btn--primary {
+  background-color: var(--primary); /* Hintergrundfarbe aus der CSS-Variable */
+  color: #242424; /* Textfarbe */
+  border: 1px solid var(--primary); /* Rahmen */
+}
+
+/* Stilregeln für Buttons mit Umrandung */
+.btn--outline {
+  background-color: transparent; /* Transparenter Hintergrund */
+  color: #fff; /* Textfarbe */
+  padding: 8px 20px; /* Innenabstand */
+  border: 1px solid var(--primary); /* Rahmen */
+  transition: all 0.3s ease-out; /* Übergangseffekt */
+}
+
+/* Stilregeln für mittelgroße Buttons */
+.btn--medium {
+  padding: 8px 20px; /* Innenabstand */
+  font-size: 18px; /* Schriftgröße */
+}
+
+/* Stilregeln für große Buttons */
+.btn--large {
+  padding: 12px 26px; /* Innenabstand */
+  font-size: 20px; /* Schriftgröße */
+}
+
+/* Stilregeln für den Hover-Effekt auf mittelgroßen und großen Buttons */
+.btn--large:hover,
+.btn--medium:hover {
+  transition: all 0.3s ease-out; /* Übergangseffekt */
+  background: #fff; /* Hintergrundfarbe bei Mouseover */
+  color: #242424; /* Textfarbe bei Mouseover */
+  transition: 250ms; /* Übergangsdauer */
+}

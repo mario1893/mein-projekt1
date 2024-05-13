@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.home,
+.about-me
+.product {
+
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.about-me__logo {
+  background: url('./images/products.jpg') center top/cover no-repeat;
+}
+
+.about-me {
+  background: url('./images/products.jpg') center top/cover no-repeat; /* Hintergrundbild oben zentriert und gestreckt */
+  padding: 100px 0; /* Innenabstand oben und unten */
+  text-align: center; /* Zentrierte Ausrichtung des Textes */
+}
+
+.about-me__image {
+  max-width: 100%; /* Maximale Breite für das Bild */
+  margin-bottom: 30px; /* Unten Abstand vom Bild */
+}
+
+.about-me__container {
+  max-width: 1400px; /* Maximale Breite des Textcontainers */
+  margin: 0 auto; /* Zentrierung des Containers */
+  background-color: rgba(255, 255, 255, 0.9); /* Hintergrundfarbe des Textcontainers mit Transparenz */
+  padding: -80px; /* Innenabstand des Textcontainers */
+  border-radius: 10px; /* Abrundung der Ecken des Textcontainers */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Schatten um den Textcontainer */
+}
+
+/* Weitere Stile für Überschriften, Absätze usw. können hier hinzugefügt werden */
+
+.about-me h1 {
+  color: #242424; /* Textfarbe für den Titel */
+  font-size: 2.5rem; /* Schriftgröße für den Titel */
+  margin-bottom: 2rem; /* Unten Abstand vom Titel */
+}
+
+.about-me h2 {
+  color: #555; /* Textfarbe für die Überschriften */
+  font-size: 1.5rem; /* Schriftgröße für die Überschriften */
+  margin-top: 3rem; /* Oben Abstand von den Überschriften */
+}
+
+.about-me p {
+  color: #555; /* Textfarbe für den Text */
+  font-size: 1.2rem; /* Schriftgröße für den Text */
+  line-height: 1.8; /* Zeilenhöhe für den Text */
+  margin-bottom: 2rem; /* Unten Abstand vom Text */
+}
+
+

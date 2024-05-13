@@ -1,0 +1,139 @@
+/* Stil für Karten */
+.cards {
+  padding: 4rem; /* Abstand um den Kartencontainer */
+  background: #fff; /* Hintergrundfarbe */
+}
+
+/* Stil für Überschrift */
+h1 {
+  text-align: center; /* Zentrierte Ausrichtung der Überschrift */
+}
+
+/* Stil für Kartencontainer */
+.cards__container {
+  display: flex; /* Flexbox-Layout */
+  flex-flow: column; /* Spaltenlayout */
+  align-items: center; /* Zentrierte Ausrichtung der Karteninhalte */
+  max-width: 1120px; /* Maximale Breite des Kartencontainers */
+  width: 90%; /* Breite des Kartencontainers */
+  margin: 0 auto; /* Automatische Ausrichtung in der Mitte */
+}
+
+/* Stil für Karten-Wrapper */
+.cards__wrapper {
+  position: relative; /* Positionierung relativ zum Kartencontainer */
+  margin: 50px 0 45px; /* Außenabstand des Karten-Wrapper */
+}
+
+/* Stil für Karten-Elemente */
+.cards__items {
+  margin-bottom: 24px; /* Abstand zwischen den Karten-Elementen */
+}
+
+/* Stil für einzelne Karte */
+.cards__item {
+  display: flex; /* Flexbox-Layout */
+  flex: 1; /* Flexibles Wachstum der Karten */
+  margin: 0 1rem; /* Außenabstand der Karten */
+  border-radius: 10px; /* Abgerundete Ecken der Karten */
+}
+
+/* Stil für Karten-Links */
+.cards__item__link {
+  display: flex; /* Flexbox-Layout */
+  flex-flow: column; /* Spaltenlayout für den Kartenlink */
+  width: 100%; /* Volle Breite des Kartenlinks */
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17); /* Schatten für Kartenlink */
+  -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017)); /* Schatten für Kartenlink (für Webkit-basierte Browser) */
+  filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017)); /* Schatten für Kartenlink */
+  border-radius: 10px; /* Abgerundete Ecken für Kartenlink */
+  overflow: hidden; /* Ausblenden von überlaufenden Inhalten */
+  text-decoration: none; /* Keine Unterstreichung für Kartenlinks */
+}
+
+/* Stil für Bildumschließung der Karte */
+.cards__item__pic-wrap {
+  position: relative; /* Positionierung relativ zum Kartenbild */
+  width: 100%; /* Volle Breite der Bildumschließung */
+  padding-top: 56.25%; /* Seitenverhältnis 16:9 */
+  overflow: hidden; /* Ausblenden von überlaufenden Inhalten */
+}
+
+/* Stil für Bildnachbearbeitung */
+.fade-img {
+  animation-name: fade-img; /* Animationsname für Bildnachbearbeitung */
+  animation-duration: 2s; /* Animationsdauer für Bildnachbearbeitung */
+}
+
+/* Stil für Overlay-Kategoriebeschriftung */
+.cards__item__pic-wrap::after {
+  content: attr(data-category); /* Anzeigen der Kategorienbeschriftung */
+  position: absolute; /* Absolute Positionierung des Kategorie-Overlays */
+  bottom: 0; /* Untere Ausrichtung des Overlays */
+  margin-left: 10px; /* Linker Außenabstand des Overlays */
+  padding: 6px 8px; /* Innenabstand des Overlays */
+  max-width: calc((100%) - 60px); /* Maximale Breite des Overlays */
+  font-size: 12px; /* Schriftgröße des Overlays */
+  font-weight: 700; /* Fettschrift des Overlays */
+  color: #fff; /* Textfarbe des Overlays */
+  background-color: #1f98f4; /* Hintergrundfarbe des Overlays */
+  box-sizing: border-box; /* Größenberechnung einschließlich Rahmen und Padding */
+}
+
+/* Stil für Bilder in den Karten */
+.cards__item__img {
+  position: absolute; /* Absolute Positionierung des Kartenbilds */
+  top: 0; /* Obere Ausrichtung des Bilds */
+  right: 0; /* Rechte Ausrichtung des Bilds */
+  bottom: 0; /* Untere Ausrichtung des Bilds */
+  left: 0; /* Linke Ausrichtung des Bilds */
+  display: block; /* Anzeige des Bilds als Blockelement */
+  width: 100%; /* Volle Breite des Bilds */
+  max-width: 100%; /* Maximale Breite des Bilds */
+  height: 100%; /* Volle Höhe des Bilds */
+  max-height: 100%; /* Maximale Höhe des Bilds */
+  object-fit: cover; /* Anpassung des Bilds an den Container */
+  transition: all 0.2s linear; /* Übergangseffekte für das Bild */
+}
+
+/* Hover-Stil für Bilder */
+.cards__item__img:hover {
+  transform: scale(1.1); /* Vergrößern des Bilds bei Hover */
+}
+
+/* Stil für Karteninformationen */
+.cards__item__info {
+  padding: 20px 30px 30px; /* Innenabstand der Karteninformationen */
+}
+
+/* Stil für Karten-Text */
+.cards__item__text {
+  color: #252e48; /* Textfarbe der Karten */
+  font-size: 18px; /* Schriftgröße der Karten */
+  line-height: 24px; /* Zeilenhöhe der Karten */
+}
+
+/* Medienabfragen für verschiedene Bildschirmgrößen */
+@media only screen and (min-width: 1200px) {
+  .content__blog__container {
+    width: 84%; /* Breite des Containers für größere Bildschirme */
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .cards__items {
+    display: flex; /* Flexbox-Layout für Karten bei größeren Bildschirmen */
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .cards__item {
+    margin-bottom: 2rem; /* Reduzierter Außenabstand der Karten bei kleineren Bildschirmen */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cards__item__pic-wrap {
+    padding-top: 75%; /* Angepasstes Seitenverhältnis für kleinere Bildschirme */
+  }
+}

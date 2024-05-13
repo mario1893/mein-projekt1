@@ -1,0 +1,84 @@
+/* Stil für den Bereich "Products" */
+.products {
+  background-image: url('../images/products.jpg');
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  background-color: #f9f9f9; /* Hintergrundfarbe des Bereichs */
+  padding: 1000px 0; /* Innenabstand oben und unten */
+  text-align: center; /* Zentrierte Ausrichtung des Textes */
+  font-size: 100px;
+  height: 100px;
+  background-position: center;
+  background-size: contain; /* Ändere von fill auf cover oder contain */
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: initial; /* Reset to default or specify a new size */
+  height: auto; /* Adjust based on content */
+  /* Additional styling specific to the products page */
+}
+
+/* Stil für den Container der Produkte */
+.products__container {
+  display: flex; /* Flexbox-Layout für den Container */
+  flex-wrap: wrap; /* Umbruch der Produkte bei Bedarf */
+  justify-content: center; /* Zentrierte Ausrichtung der Produkte */
+  margin-top: 50px;
+  background-color: transparent; /* Transparenter Hintergrund für die Flexbox */
+}
+
+
+/* Stil für jedes einzelne Produkt */
+.products__item {
+  margin: 20px; /* Außenabstand der Produkte */
+  width: 300px; /* Breite der Produkte */
+  background-color: transparent; /* Transparenter Hintergrund der Produkte */
+  border-radius: 10px; /* Abrundung der Ecken der Produkte */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Schatten der Produkte */
+  transition: all 0.3s ease; /* Übergangseffekte beim Hover */
+}
+
+/* Hover-Stil für Produkte */
+.products__item:hover {
+  transform: translateY(-5px); /* Verschiebung nach oben beim Hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Verstärkter Schatten beim Hover */
+}
+
+/* Stil für den Link jedes Produkts */
+.products__item__link {
+  text-decoration: none; /* Keine Unterstreichung für Links */
+}
+
+/* Stil für den Bildbereich jedes Produkts */
+.products__item__pic-wrap {
+  height: 200px; /* Höhe des Bildbereichs */
+  overflow: hidden; /* Verborgene Überlauf für Bilder, die größer sind als der Container */
+  border-top-left-radius: 10px; /* Abrundung der oberen linken Ecke */
+  border-top-right-radius: 10px; /* Abrundung der oberen rechten Ecke */
+}
+
+/* Stil für die Produktbilder */
+.products__item__img {
+  width: 100%; /* Bildbreite */
+  height: 100%; /* Bildhöhe */
+  object-fit: cover; /* Skalierung und Zuschneiden von Bildern */
+}
+
+/* Stil für die Produktinformationen */
+.products__item__info {
+  padding: 20px; /* Innenabstand der Produktinformationen */
+}
+
+/* Stil für den Text der Produkte */
+.products__item__text {
+  font-size: 20px; /* Schriftgröße des Texts */
+  margin-bottom: 10px; /* Unten Abstand vom Text */
+}
+
+/* Stil für den Preis der Produkte */
+.products__item__price {
+  font-size: 18px; /* Schriftgröße des Preises */
+  color: #888; /* Textfarbe des Preises */
+}

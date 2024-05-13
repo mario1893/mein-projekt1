@@ -1,0 +1,194 @@
+/* Styling für die Navbar */
+.navbar {
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Styling für den Container der Navbar */
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  max-width: 1500px;
+}
+
+/* Styling für den Container des Logos und des Texts in der Navbar */
+.navbar-logo-container {
+  display: flex; /* Flexbox-Container für das Logo und den Text */
+  align-items: center; /* Elemente auf der Querachse zentrieren */
+}
+
+/* Styling für den Text des Logos in der Navbar */
+.navbar-logo-text {
+  color: #fff; /* Textfarbe auf Weiß setzen */
+  justify-self: start; /* Element am Anfang der Hauptachse ausrichten (in einem Grid-Container) */
+  margin-left: 20px; /* Linker Außenabstand des Elements festlegen */
+  cursor: pointer; /* Mauszeiger in Hand umwandeln, um anzuzeigen, dass das Element anklickbar ist */
+  text-decoration: none; /* Unterstreichungen für Links entfernen */
+  font-size: 2rem; /* Schriftgröße auf 2 Rem (relative Einheiten) festlegen */
+  white-space: nowrap; /* Verhindern, dass der Text umgebrochen wird */
+}
+
+/* Styling für das Logo in der Navbar */
+.navbar-logo {
+  margin-left: 0.5rem;
+  font-size: 1.8rem;
+}
+
+/* Styling für das Menü in der Navbar */
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 60vw;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+/* Styling für die Elemente im Menü der Navbar */
+.nav-item {
+  height: 80px;
+}
+
+/* Styling für die Links im Menü der Navbar */
+.nav-links {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+}
+
+/* Styling für den Hover-Effekt der Links im Menü der Navbar */
+.nav-links:hover {
+  border-bottom: 4px solid #fff;
+  transition: all 0.2s ease-out;
+}
+
+/* Styling für das Burger-Menü-Symbol */
+.fa-bars {
+  color: #fff;
+}
+
+/* Styling für mobile Links im Menü der Navbar */
+.nav-links-mobile {
+  display: none;
+}
+
+/* Styling für das Burger-Menü-Symbol */
+.menu-icon {
+  display: none;
+}
+
+/* Media-Query für Bildschirmbreiten bis 1260px */
+@media screen and (max-width: 1260px) {
+  /* Positionierung des Menüs relativ zur Navbar */
+  .NavbarItems {
+    position: relative;
+  }
+
+  /* Styling für das Menü bei mobilen Bildschirmbreiten */
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  /* Styling für das aktive Menü bei mobilen Bildschirmbreiten */
+  .nav-menu.active {
+    background: #000000;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  /* Styling für die Links im Menü bei mobilen Bildschirmbreiten */
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  /* Styling für den Hover-Effekt der Links im Menü bei mobilen Bildschirmbreiten */
+  .nav-links:hover {
+    background-color: #fff;
+    color: #242424;
+    border-radius: 0;
+  }
+
+  /* Positionierung des Text-Logos bei mobilen Bildschirmbreiten */
+  .navbar-logo-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+  }
+  
+/* Positionierung des Bild-Logos relativ zum Text bei mobilen Bildschirmbreiten */
+.navbar-logo {
+  position: absolute; /* Relative Positionierung des Logos */
+  top: 0; /* Vom normalen Fluss des Dokuments ausrichten */
+  left: -20px; /* Einrichten einer horizontalen Verschiebung neben dem Text */
+}
+
+
+
+  /* Styling für das Burger-Menü-Symbol bei mobilen Bildschirmbreiten */
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  /* Styling für das Schließen-Symbol im Burger-Menü bei mobilen Bildschirmbreiten */
+  .fa-times {
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  /* Styling für mobile Links im Menü der Navbar */
+  .nav-links-mobile {
+    display: block;
+    text-align: center;
+    margin: 2rem auto;
+    border-radius: 4px;
+    width: 80%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: #fff;
+    padding: 14px 20px;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-out;
+  }
+
+  /* Styling für den Hover-Effekt der mobilen Links im Menü der Navbar */
+  .nav-links-mobile:hover {
+    background: #fff;
+    color: #000000;
+    transition: 250ms;
+  }
+}
